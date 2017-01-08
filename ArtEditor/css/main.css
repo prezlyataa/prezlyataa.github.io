@@ -467,7 +467,7 @@ div.footer-row {
         height: 670px;
     }
     div.row div.portfolio .col-lg-12 {
-        padding-left: 50px;
+        padding-left: 40px;
     }
 }
 
@@ -497,7 +497,7 @@ div.footer-row {
     div.portfolio-item iframe {
         width: 320px;
         height: 200px;
-        padding-right: 20px;
+        padding-right: 30px;
     }
     .right-row {
         margin-left: 5px;

@@ -10,13 +10,11 @@ function average_5() {
     p3 = parseInt(p3);
     p4 = parseInt(p4);
     p5 = parseInt(p5);
-    if(p1 == '' || p2 == '' || p4 == '' || p4 == '' || p5 == '') {
-        alert('Fill all cells');
-    } else {
+
         result = (p1 + p2 + p3 + p4 + p5) / 5;
         document.getElementById('output').innerHTML = 'Average price: ' + result;
-    }
 }
+
 function average_10() {
     var p11,p22,p33,p44,p55,p6,p7,p8,p9,p10,result2;
     p11 = document.getElementById('sold_11').value;
@@ -42,3 +40,24 @@ function average_10() {
     result2 = (p11+p22+p33+p44+p55+p6+p7+p8+p9+p10)/10;
     document.getElementById('output2').innerHTML = 'Average price: ' + result2;
 }
+
+var inputs = document.getElementById('inputs');
+function create_input() {
+    var n = document.getElementById('number').value;
+    n = parseInt(n);
+    for (var i = 0; i < n; i++) {
+        var new_input = document.createElement('input');
+        new_input.id = 'sold_n';
+        inputs.appendChild(new_input);
+    }
+}
+function average_n() {
+    var fields = document.getElementById('inputs').getElementsByTagName('input');
+    var val = 0;
+    for (var i = 0; i < fields.length; i++) {
+        val +=+ fields[i].value;
+    };
+    val = val/fields.length;
+    document.getElementById('outputn').innerHTML = 'Average price: ' + val;
+};
+

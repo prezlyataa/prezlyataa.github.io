@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/vendor/jquery-1.12.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -101,6 +101,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Last n sales
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <label for="number">Enter the number of fields: <input type="text" id="number"></label>
+                            <div id="inputs"></div>
+                            <div class="answer">
+                                <button class="btn btn-primary" id="add_input" onclick="create_input()">Add inputs</button>
+                                <button class="btn btn-success" id="calc" onclick="average_n()">Calculate</button>
+                                <a href="index.html"><button class="btn btn-danger">Clear</button></a>
+                                <p id="outputn"></p>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 
